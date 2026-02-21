@@ -12,7 +12,7 @@ document.getElementById('login-btn').addEventListener ('click', function() {
     //3. validate mobile number and pin
         if (contact === "01234567890" && pin === "1234") {
             alert("Login successful!"); 
-            window.location.assign("/home.html"); // Redirect to home page
+            window.location.assign("home.html"); // Redirect to home page
             //4. if valid, redirect to home page
              // Redirect to home page
         } else {
