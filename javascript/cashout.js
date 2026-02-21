@@ -3,6 +3,10 @@ document.getElementById('cashout-btn').addEventListener ('click', function() {
      const cashoutNumberinput = document.getElementById('cashout-number');
         const cashoutNumber = cashoutNumberinput.value;
         console.log(cashoutNumber);
+        if (cashoutNumber.length !== 11 ) {
+            alert("Invalid mobile number");
+            return;
+        }
     //2. get amount input
         const cashoutAmountinput = document.getElementById('cashout-amount');
         const cashoutAmount = cashoutAmountinput.value;
@@ -19,15 +23,15 @@ document.getElementById('cashout-btn').addEventListener ('click', function() {
             alert('Insufficient balance for cashout');
             return;
         } 
-        console.log('newbalance:', newbalance);
-
-    const cashoutpininput = document.getElementById('cashout-pin');
-    const cashoutPin = cashoutpininput.value;
-    if (cashoutPin === '1234') {
-        alert('Cashout successful');
+        
+        const cashoutpininput = document.getElementById('cashout-pin');
+        const cashoutPin = cashoutpininput.value;
+        if (cashoutPin === '1234') {
+            alert('Cashout successful');
+            console.log('newbalance:', newbalance);
+            currencyBalance.innerText = newbalance;
     } else {
         alert('Incorrect pin, cashout failed');
     }
-
-    
+  
 })
