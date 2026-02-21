@@ -6,3 +6,14 @@ function getValue(id) {
     console.log( id,value);
     return value;
 }
+
+function getBalance() {
+    const currencyBalance = document.getElementById('balance');
+    const balance = currencyBalance.innerText;
+    console.log('balance:', balance);
+    return balance;
+}
+
+function setbalance(value) {
+    document.getElementById('balance').innerText = value;
+}
