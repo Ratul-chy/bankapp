@@ -21,5 +21,13 @@ document.getElementById('cashout-btn').addEventListener ('click', function() {
         } 
         console.log('newbalance:', newbalance);
 
+    const cashoutpininput = document.getElementById('cashout-pin');
+    const cashoutPin = cashoutpininput.value;
+    if (cashoutPin === '1234') {
+        alert('Cashout successful');
+    } else {
+        alert('Incorrect pin, cashout failed');
+    }
+
     
 })
